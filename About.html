@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Storyboard</title>
+<link rel="stylesheet" href="About.css">
+</head>
+<body>
+
+<div class="about-section">
+    <div class="header">
+        <h1>Storyboard</h1>
+        <p>See our <b>Storyboard</b>.</p>
+      </div>
+</div>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="Introductions.html">Introduction</a>
+  <a href="Creations.html">Creation of Shadow Puppets</a>
+  <a href="#" class="active">Storyboard</a>
+  <a href="Video.html">Video</a>
+  </div>
+
+<h2 style="text-align:center">Our Storyboard</h2>
+<p style="text-align:center"><i>Tip: Click on the image to see clearly</i></p>
+  <div class="row">
+    <div class="card">
+      <img src="First Scene.png" onclick="toggleViewMode(this)">
+    </div>
+    <div class="card">
+      <img src="Second Scene.png" onclick="toggleViewMode(this)">
+    </div>
+    <div class="card">
+      <img src="Third Scene.png" onclick="toggleViewMode(this)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="card">
+      <img src="Fourht Scene.png" onclick="toggleViewMode(this)">
+    </div>
+    <div class="card">
+      <img src="Fifth Scene.png" onclick="toggleViewMode(this)">
+    </div>
+    <div class="card">
+      <img src="Sixth Scene.png" onclick="toggleViewMode(this)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="card">
+      <img src="Seventh Scene.png" onclick="toggleViewMode(this)">
+    </div>
+    <div class="card">
+      <img src="8th Scene.png" onclick="toggleViewMode(this)">
+    </div>
+    <div class="card">
+      <img src="9th Scene.png" onclick="toggleViewMode(this)">
+    </div>
+  </div>
+  <div class="row">
+    <div class="card">
+      <img src="10th Scene.png" onclick="toggleViewMode(this)">
+    </div>
+    <div class="card">
+      <img src="11thScene.png" onclick="toggleViewMode(this)">
+    </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript to toggle view mode
+  function toggleViewMode(img) {
+    var viewModeContainer = document.createElement("div");
+    viewModeContainer.className = "view-mode-container";
+
+    var imgClone = img.cloneNode();
+    imgClone.onclick = function() {
+      viewModeContainer.classList.remove("active");
+      document.body.classList.remove("view-mode");
+      viewModeContainer.remove();
+    };
+
+    viewModeContainer.appendChild(imgClone);
+    document.body.appendChild(viewModeContainer);
+
+    viewModeContainer.classList.add("active");
+    document.body.classList.add("view-mode");
+  }
+</script>
+</body>
+</html>

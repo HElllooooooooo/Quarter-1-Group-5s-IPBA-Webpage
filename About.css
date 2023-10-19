@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  
+  /* color: #bd5800; */
+}
+
+
+body {
+    margin: 0;
+    background-image: url("Darker-Bg.png");
+    color: white;
+  }
+
+  .navbar {
+    overflow: hidden;
+    background-color: #3e4433;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+ 
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  
+ 
+  .navbar a.right {
+    float: right;
+  }
+  
+ 
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+ 
+  .navbar a.active {
+    background-color: #666;
+    color: white;
+  }
+  
+ 
+  /* .row {  
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+  } */
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 10px;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+/*   
+  .column {
+    margin-left: 120px;
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 7px;
+  } */
+
+  .about-section {
+  padding: 80px;
+  text-align: center;
+  background: #ffffe0;
+  color: #ffffff;
+background-image: url("Yello-space-bg.png");
+  }
+  
+  .about-section h1{
+      font-size: 40px;
+
+  }
+  
+  .about-section p {
+    font-family: cursive;
+  }
+
+  .about-section b {
+    font-family: cursive;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  
+  
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+/* CSS for view mode */
+.view-mode-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  visibility: hidden;
+}
+
+.view-mode-container.active {
+  visibility: visible;
+}
+
+.view-mode-container img {
+  width: 50%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  transition: background-color 0.5s ease;
+}
+
+body.view-mode {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+  body {
+    transition: background-color 0.5s ease;
+  }
+
+  body.view-mode {
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
